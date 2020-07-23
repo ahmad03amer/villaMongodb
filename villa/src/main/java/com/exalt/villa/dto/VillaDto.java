@@ -1,12 +1,13 @@
 package com.exalt.villa.dto;
 
-import com.exalt.villa.model.Address;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class VillaMapper {
+public class VillaDto implements Serializable {
     private String id;
     private String name;
     private double cost;
-    private Address address;
+    private AddressDto addressDto;
 }

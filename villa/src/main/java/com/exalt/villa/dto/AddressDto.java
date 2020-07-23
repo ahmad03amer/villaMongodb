@@ -4,7 +4,7 @@ import lombok.Data;
 import org.springframework.data.mongodb.core.geo.GeoJsonPoint;
 
 @Data
-public class AddressMapper {
+public class AddressDto {
     private String country;
     private String city;
     private String street;
