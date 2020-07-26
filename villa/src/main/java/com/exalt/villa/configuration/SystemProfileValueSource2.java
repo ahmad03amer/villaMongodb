@@ -1,4 +1,4 @@
-/*
+
 package com.exalt.villa.configuration;
 
 import org.springframework.stereotype.Component;
@@ -21,4 +21,4 @@ public class SystemProfileValueSource2 implements ProfileValueSource {
         return System.getProperty(key);
     }
 }
-*/
+

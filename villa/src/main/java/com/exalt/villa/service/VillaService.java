@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface VillaService {
 
-     List<Villa> findAll() ;
+    List<Villa> findAll() ;
 
     Villa addVilla(Villa villaDto);
 
@@ -19,7 +19,7 @@ public interface VillaService {
 
     List<Villa> getAllWithPagination(int pageNo, int pageSize);
 
-     List<Villa> findByAny(String searchText);
+    List<Villa> findByAny(String searchText);
 
     List<Villa> getByDistance(float longitude, float latitude, int distance);
 

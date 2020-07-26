@@ -28,29 +28,27 @@ public class VillaController {
         return villaService.addVilla(villaDto);
     }
 
-
     @GetMapping("/{id}")
     public Villa getVillaById(@PathVariable String id) {
         log.info("user entered to addVilla ");
         return villaService.getVillaById(id);
     }
 
-    @GetMapping("/findByDistance")
+    @GetMapping("/find-by-distance")
     public List<Villa> getByDistance(@PathVariable float longitude , @PathVariable float latitude ,@PathVariable int distance) {
         return villaService.getByDistance( longitude ,  latitude ,  distance);
     }
 
-    @GetMapping("/fullTextSearch/{searchText}")
+    @GetMapping("/full-text-search/{searchText}")
     public List<Villa> findByAny(@PathVariable  String searchText) {
         return villaService.findByAny(searchText);
     }
 
-    @GetMapping("/allWithPagination")
+    @GetMapping("/all-with-pagination")
     public List<Villa> getAllWithPagination(@RequestParam int pageNo, @RequestParam int pageSize) {
         log.info("user entered to getAllWithPagination");
         return villaService.getAllWithPagination(pageNo, pageSize);
     }
-
 
     @PutMapping("/{id}")
     public Villa updateVilla(@RequestBody Villa villa,@PathVariable String id ) {
@@ -63,7 +61,7 @@ public class VillaController {
         return villaService.deleteVilla(id);
     }
 
-    @GetMapping("/gitByGeo/{longitude}/{latitude}/{maxDistance}")
+    @GetMapping("/git-by-geo/{longitude}/{latitude}/{maxDistance}")
     public List<Villa> getVillasGeo(@PathVariable double longitude , @PathVariable double latitude ,@PathVariable double maxDistance ){
         log.info("user entered to getVillasGeo");
         return villaService.getVillasGeo(longitude,latitude,maxDistance);

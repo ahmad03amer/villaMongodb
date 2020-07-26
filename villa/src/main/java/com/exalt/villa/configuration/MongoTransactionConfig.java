@@ -1,4 +1,4 @@
-/*
+
 package com.exalt.villa.configuration;
 
 import com.mongodb.client.MongoClient;
@@ -27,4 +27,4 @@ public class MongoTransactionConfig extends AbstractMongoConfiguration {
     public com.mongodb.MongoClient mongoClient() {
         return null;//new MongoClient("127.0.0.1", 27017);
     }
-}*/
+}

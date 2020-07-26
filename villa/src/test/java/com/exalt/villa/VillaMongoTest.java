@@ -44,9 +44,8 @@ public class VillaMongoTest {
         address.setNumber("253");
         address.setPostalCode("DD256");
         address.setStreet("main street.");
-     */
-/*   GeoJsonPoint location =new GeoJsonPoint(4, 15);
-        address.setLocation(location);*//*
+        GeoJsonPoint location =new GeoJsonPoint(4, 15);
+        address.setLocation(location);
 
         villa.setCost(2500);
         villa.setAddress(address);
@@ -79,9 +78,9 @@ public class VillaMongoTest {
 
     @Test
     @Order(2)
-    public void getEmployeesTest(){
+    public void getVillasTest(){
         String getVillaUrl = "http://localhost:"+localPort+"/api/villa/";
-         restTemplate = new RestTemplate();
+        restTemplate = new RestTemplate();
 
         List<Villa> villas = (List<Villa>) restTemplate.getForObject(getVillaUrl, Villa.class);
         assertNotNull(villas,"villas Array is null!!");

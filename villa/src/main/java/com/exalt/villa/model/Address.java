@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.geo.GeoJsonPoint;
 import org.springframework.data.mongodb.core.index.GeoSpatialIndexType;
 import org.springframework.data.mongodb.core.index.GeoSpatialIndexed;
-import org.springframework.data.mongodb.core.mapping.Field;
 
 @Data
 @AllArgsConstructor
@@ -16,7 +15,6 @@ public class Address {
     private String city;
     private String street;
     private String number;
-   // @Field(name = "postal_code")
     private String postalCode;
     @GeoSpatialIndexed(type= GeoSpatialIndexType.GEO_2DSPHERE)
     private GeoJsonPoint location;
